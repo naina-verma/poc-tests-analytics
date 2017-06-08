@@ -1,8 +1,8 @@
 /**
- * AlMighty page object example module for openshift.io start page
+ * 
  * See: http://martinfowler.com/bliki/PageObject.html,
  * https://www.thoughtworks.com/insights/blog/using-page-objects-overcome-protractors-shortcomings
- * @author ldimaggi@redhat.com
+ * @author naina-verma@redhat.com
  */
 
 'use strict';

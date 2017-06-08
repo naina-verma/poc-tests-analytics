@@ -9,7 +9,7 @@
  * 
  * beforeEach will set the mode to phone. Any tests requiring a different resolution will must set explicitly. 
  * 
- * @author ldimaggi, nverma
+ * @author naina-verma, nverma
  */
 
 var until = protractor.ExpectedConditions;
