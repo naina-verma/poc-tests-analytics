@@ -1,12 +1,12 @@
 {
-  "name": "fabric8-planner-runtime",
+  "name": "fabric8-analytics",
   "version": "0.0.1",
   "description": "",
   "keywords": [
     "angular2",
     "fabric8"
   ],
-  "author": "Michael Kleinhenz <kleinhenz@redhat.com>",
+  "author": "naina verma <naina.verma7@gmail.com",
   "license": "Apache 2",
   "scripts": {
     "build:dev": "npm run clean:dist && webpack --config config/webpack.dev.js --progress --profile",
