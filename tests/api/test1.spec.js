@@ -56,7 +56,7 @@ describe('testREST page', function () {
   });
 
 
-  it('Show declared license information for vert.x core" :: maven/io.vertx:vertx-core/3.4.1', function() {
+  xit('Show declared license information for vert.x core" :: maven/io.vertx:vertx-core/3.4.1', function() {
      var response=page.GetComponentAnalysis('maven/io.vertx:vertx-core/3.4.1')  
      response.inspectJSON()
      .afterJSON(function (body) {
@@ -65,7 +65,7 @@ describe('testREST page', function () {
     response.toss(); 
   });
 
-  it('Show declared license information for vert.x Web" :: maven/io.vertx:vertx-web/3.4.1', function() {
+  xit('Show declared license information for vert.x Web" :: maven/io.vertx:vertx-web/3.4.1', function() {
      var response=page.GetComponentAnalysis('maven/io.vertx:vertx-web/3.4.1')  
      response.inspectJSON()
      .afterJSON(function (body) {
@@ -75,7 +75,7 @@ describe('testREST page', function () {
   });
 
 
-  it('Show declared license information for sping core :: maven/org.springframework:spring-core/4.3.3.RELEASE', function() {
+  xit('Show declared license information for sping core :: maven/org.springframework:spring-core/4.3.3.RELEASE', function() {
      var response=page.GetComponentAnalysis('maven/org.springframework:spring-core/4.3.3.RELEASE')  
      response.inspectJSON()
      .afterJSON(function (body) {
