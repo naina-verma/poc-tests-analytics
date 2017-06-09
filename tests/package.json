@@ -6,7 +6,7 @@
     "angular2",
     "fabric8"
   ],
-  "author": "naina verma <naina.verma7@gmail.com",
+  "author": "naina verma <naina.verma7@gmail.com>",
   "license": "Apache 2",
   "scripts": {
     "build:dev": "npm run clean:dist && webpack --config config/webpack.dev.js --progress --profile",
