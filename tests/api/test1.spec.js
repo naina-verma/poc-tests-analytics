@@ -15,8 +15,7 @@
 'use strict';
 
 var frisby = require("frisby");
-var testREST = require('./test.page');
-
+var testREST = require('./apiCalls');
 describe('testREST page', function () {
   var page, browserMode;
   beforeEach(function () {
