@@ -1,6 +1,5 @@
 /**
- * POC test for ALMighty REST API - goal is to create/delete NNN workitems daily and track
- * the throughput to track trends over time
+ * POC test for ALMighty REST API 
  * See: http://frisbyjs.com/
  * @author naina-verma
  *
@@ -10,7 +9,7 @@
  *
  * Run by: jasmine-node <script name>
  *
- * TODO - Generate login token during test ("bin/alm-cli generate login -H demo.almighty.io")
+ * TODO - Generate login token during test 
  */
 
 'use strict';
@@ -56,30 +55,39 @@ describe('testREST page', function () {
   });
 
 
-  xit('Show declared license information for vert.x core" :: maven/io.vertx:vertx-core/3.4.1', function() {
+  it('Show declared license information for vert.x core" :: maven/io.vertx:vertx-core/3.4.1', function() {
+     var expectedReults = ["Apache 2.0","EPL 1.0"]
      var response=page.GetComponentAnalysis('maven/io.vertx:vertx-core/3.4.1')  
      response.inspectJSON()
      .afterJSON(function (body) {
-     expect(body.result.data[0].version.licenses).toMatch('["Apache 2.0","EPL 1.0"]')
+       for (var list=0;list <expectedReults.length ;list++){
+            expect(body.result.data[0].version.licenses).toContain(expectedReults[list])
+       }
     })
     response.toss(); 
   });
 
-  xit('Show declared license information for vert.x Web" :: maven/io.vertx:vertx-web/3.4.1', function() {
+  it('Show declared license information for vert.x Web" :: maven/io.vertx:vertx-web/3.4.1', function() {
+     var expectedReults = ["Apache 2.0","EPL 1.0"]
      var response=page.GetComponentAnalysis('maven/io.vertx:vertx-web/3.4.1')  
      response.inspectJSON()
      .afterJSON(function (body) {
-     expect(body.result.data[0].version.licenses).toMatch('["Apache 2.0","EPL 1.0"]')
+     for (var list=0;list <expectedReults.length ;list++){
+            expect(body.result.data[0].version.licenses).toContain(expectedReults[list])
+       }
     })
     response.toss(); 
   });
 
 
-  xit('Show declared license information for sping core :: maven/org.springframework:spring-core/4.3.3.RELEASE', function() {
+  it('Show declared license information for sping core :: maven/org.springframework:spring-core/4.3.3.RELEASE', function() {
+     var expectedReults = ["Apache 2.0"]
      var response=page.GetComponentAnalysis('maven/org.springframework:spring-core/4.3.3.RELEASE')  
      response.inspectJSON()
      .afterJSON(function (body) {
-     expect(body.result.data[0].version.licenses).toMatch('["Apache 2.0"]')
+      for (var list=0;list <expectedReults.length ;list++){
+            expect(body.result.data[0].version.licenses).toContain(expectedReults[list])
+       }
     })
     response.toss(); 
   });
